@@ -1,15 +1,13 @@
-const removeFromArray = function(array, removeArrayIndex) {
+const removeFromArray = function(array, ...removeArrayIndex) {
     newArray = [];
 
 
+
+// When array[i] includes something from removeArrayIndex set to false, otherwise push new variable to newArray. 
     for (let i = 0; i < array.length; i++) {
-        if (i == removeArrayIndex - 1) {
-            // Do nothing
-        } else {
+        if (!removeArrayIndex.includes(array[i])) {
             newArray.push(array[i]);
         }
-        console.log(i);
-        console.log(array.length);
     }
     return newArray;
 };
