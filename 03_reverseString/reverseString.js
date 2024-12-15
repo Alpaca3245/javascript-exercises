@@ -1,4 +1,4 @@
-//   Pusedocode:
+//   Psuedocode:
 // - put each letter indiviually of a string into a array
 // - Reverse the array by putting it in a variable
 // - Copy variable to reverseString

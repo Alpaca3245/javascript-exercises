@@ -7,38 +7,28 @@ const subtract = function(num1, num2) {
 };
 
 const sum = function(array) {
-	let arraySum = 0;
-
-  for (let i = 0; i < array.length; i++) {
-    arraySum = arraySum + array[i];
-  }
-  return arraySum;
+  return array.reduce((total, currentIndex) => total + currentIndex, 0);
 };
 
-
+// Does not factor in when multiplying for 0
 const multiply = function(array) {
-  // Can't initalize multiplySum as 0, otherwise it won't multiply no matter the number
-  // Initalized to first in array to prevent this from happening
-  let multiplySum = array[0];
-
-  for (let i = 1; i < array.length; i++) {
-
-    multiplySum = multiplySum * array[i];
-  }
-  return multiplySum;
+  return array.reduce((total, currentIndex) => total * currentIndex, 0);
 };
 
 const power = function(num1, num2) {
-	return (Math.pow(num1, num2));
+  let newArr = [];
+
+  // Creates an array using just num1, and with the total of num1 in the array is equal to num2,
+  // use reduce to multiply the total with currentindex to get the power
+  // More compilated than a for loop, but this is for practice.
+  for (let i = 0; i < num2; i++) {
+    newArr.push(num1);
+  }
+  return newArr.reduce((total, currentIndex) => total * currentIndex, 1);
 };
 
 const factorial = function(num) {
-  let sum = 1;
-
-	for (let i = 1; i <= num; i++) {
-      sum = sum * i;
-  }
-  return sum;
+  
 };
 
 // Do not edit below this line
